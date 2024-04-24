@@ -5,12 +5,12 @@ function addTask() {
     if (newTask !== "") {
         const li = document.createElement('li');
         
+        
         // Span for task text
-        const span = document.createElement('span');
-        span.textContent = newTask;
-        span.onclick = function() {
-            toggleTaskCompletion(this);
-        };
+        const taskText = document.createElement('span');
+        taskText.classList.add('task-text');
+        taskText.textContent = newTask;
+        taskText.onclick = function() { toggleTaskCompletion(this); };
 
         // Delete button
         const deleteBtn = document.createElement('button');
@@ -20,9 +20,9 @@ function addTask() {
         };
 
         // Append span and delete button to li
-        li.appendChild(span);
+        li.appendChild(taskText);
         li.appendChild(deleteBtn);
-
+        
         // Append li to list
         document.getElementById('tasksList').appendChild(li);
 
@@ -40,3 +40,4 @@ function toggleTaskCompletion(taskElement) {
 function deleteTask(taskElement) {
     taskElement.remove();
 }
+
