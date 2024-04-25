@@ -1,4 +1,3 @@
-/* styles.css */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f9;
@@ -21,7 +20,7 @@ input[type="text"], button {
     margin: 8px 0;
     border: 1px solid #ddd;
     border-radius: 4px;
-    width: calc(100% - 24px); /* Adjust for padding and border */
+    width: calc(100% - 24px); 
 }
 
 input[type="text"] {
@@ -67,9 +66,9 @@ li:hover {
 
 button.delete-btn {
     padding: 6px 10px;
-    margin-left: 4px; /* Add margin if needed */
-    flex-shrink: 0; /* Prevent the button from shrinking */
-    width: 80px; /* Set a fixed width for consistency */
+    margin-left: 4px; 
+    flex-shrink: 0;
+    width: 80px; 
     height: 40px;
     background-color: #d9534f;
     color: white;
@@ -79,14 +78,14 @@ button.delete-btn {
 }
 
 .task-text {
-    flex-grow: 1; /* Ensure the text takes up the available space */
+    flex-grow: 1; 
     margin-right: 10px;
 }
 
 .completed {
     text-decoration: line-through;
     color: #aaa;
-    opacity: 0.7; /* Make completed tasks less prominent */
+    opacity: 0.7; 
 }
 
 button.delete-btn:hover {
@@ -98,4 +97,85 @@ h1 {
     text-align: center;
     color: #333;
 }
+
+
+.task.work {
+    border-left: 4px solid #4caf50; 
+}
+
+.task.personal {
+    border-left: 4px solid #ff9800; 
+}
+
+.task.urgent {
+    border-left: 4px solid #f44336; 
+}
+
+.task.school {
+    border-left: 4px solid #2196f3; 
+}
+
+
+.category-legend {
+    margin-top: 20px;
+    padding: 10px;
+    background: #f9f9f9;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.category-legend h2 {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.legend-color {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.legend-color.work {
+    background-color: #4caf50;
+}
+
+.legend-color.urgent {
+    background-color: #f44336;
+}
+
+.legend-color.personal {
+    background-color: #ff9800;
+}
+
+.legend-color.school {
+    background-color: #2196f3;
+}
+
+.legend-label {
+    display: inline-block;
+}
+
+input[type="date"],
+input[type="time"] {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: calc(50% - 10px);
+}
+.task-deadline {
+    font-size: 0.9em;
+    color: #555;
+    margin-left: 10px;
+}
+
 
