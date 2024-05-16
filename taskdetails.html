@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Details</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="task-details-container">
+        <h1>Task Details</h1>
+        <div class="task-details">
+            <p><strong>Task:</strong> <span id="taskName"></span></p>
+            <p><strong>Deadline:</strong> <span id="taskDeadline"></span></p>
+            <p><strong>Notes:</strong> <span id="taskNotes"></span></p>
+            <button onclick="goBack()">Back to To-Do List</button>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            document.getElementById('taskName').textContent = urlParams.get('name');
+            document.getElementById('taskDeadline').textContent = urlParams.get('deadline');
+            document.getElementById('taskNotes').textContent = urlParams.get('notes');
+        });
+
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>
